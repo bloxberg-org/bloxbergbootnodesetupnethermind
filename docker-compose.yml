@@ -1,0 +1,27 @@
+version: "3.5"
+services:
+  bootnode:
+    container_name: bloxbergNethermindBootnode
+    build:
+      context: ./src
+      dockerfile: Dockerfile
+    entrypoint: /start.sh
+    # command:
+    volumes:
+      - ./bootnode/bloxberg.json:/nethermind/chainspec/bloxberg.json
+      - ./bootnode/config.json:/nethermind/configs/bloxberg.cfg
+      - ./bootnode/static-nodes.json:/nethermind/Data/static-nodes-bloxberg.json
+      - ./bootnode/keystore:/nethermind/keystore
+      - ./bootnode/db/bloxberg:/nethermind/nethermind_db/bloxberg
+      - ./bootnode/logs:/nethermind/logs
+      - ./bootnode/bootnode.pwd:/nethermind/bootnode.pwd
+    ports:
+      - 8545:8545
+      - 8546:8546
+      - 30303:30303
+    user: "0:0"
+    # Pass env vars into the container.
+    environment:
+      NAT_IP: ${NAT_IP}
+      PUBLIC_ADDRESS: ${PUBLIC_ADDRESS}
+    restart: unless-stopped

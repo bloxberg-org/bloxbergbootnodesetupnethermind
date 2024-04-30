@@ -1,0 +1,7 @@
+/bootnode/db
+# Ignore contents of keystore but keep the folder
+/bootnode/keystore/*
+!/bootnode/keystore/.gitkeep
+/bootnode/logs
+.env
+/bootnode/bootnode.pwd
