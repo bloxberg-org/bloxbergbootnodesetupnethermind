@@ -2,7 +2,7 @@
 
 - Copy the `.env-template` into a file named `.env`.
 
-- Set the `NAT_IP` in the `.env` file.
+- Set the External IP as `NAT_IP` in the `.env` file.
 
 ## Run
 
