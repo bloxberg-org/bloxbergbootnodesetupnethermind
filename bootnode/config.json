@@ -4,19 +4,14 @@
     "ChainSpecPath": "/nethermind/chainspec/bloxberg.json",
     "IsMining": false,
     "StaticNodesPath": "/nethermind/Data/static-nodes-bloxberg.json",
-    "StoreReceipts": true,
-    "WebSocketsEnabled": false
+    "WebSocketsEnabled": true,
+    "DiscoveryEnabled": true
   },
   "Network": {
     "ActivePeersMaxCount": 256,
     "DiscoveryPort": 30303,
     "P2PPort": 30303,
-    "StaticPeers": null,
-    "DiagTracerEnabled": false,
-    "DiscoveryEnabled": true
-  },
-  "Snapshot": {
-    "Enabled": true
+    "DiagTracerEnabled": false
   },
   "JsonRpc": {
     "Enabled": true,
@@ -41,25 +36,12 @@
     "PasswordFiles": ["/nethermind/bootnode.pwd"]
   },
   "Aura": {
-    "AllowAuRaPrivateChains": true,
-    "ForceSealing": true
+    "AllowAuRaPrivateChains": true
   },
   "Pruning": {
     "Mode": "None"
   },
   "Sync": {
-    "SynchronizationEnabled": true,
-    "FastSync": false,
-    "FastBlocks": false,
-    "DownloadHeadersInFastSync": false,
-    "DownloadBodiesInFastSync": false,
-    "DownloadReceiptsInFastSync": false,
     "UseGethLimitsInFastBlocks": false
-  },
-  "EthStats": {
-    "Enabled": false,
-    "Name": "test_node_name",
-    "Secret": "test",
-    "Server": "wss://0.0.0.0:3000/api"
   }
 }
